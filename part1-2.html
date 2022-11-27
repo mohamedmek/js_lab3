@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Calc</title>
+</head>
+<body>
+    <form >
+        <label for="fnum">First number :</label>
+        <input type="text" id="fnum">
+        <br><br>
+
+        
+        <label for="operation">Choose Operation :</label>
+        <select name="op" id="op">
+            <option value="sum">sum</option>
+            <option value="subtract">subtract</option>
+            <option value="multi">multi</option>
+            <option value="division">division</option>
+            <option value="moduls">moduls</option>
+        </select>
+        <br><br>
+
+        <label for="lnum">second number :</label>
+        <input type="text" id="lnum">        
+        <br><br>
+
+        <input type="submit" value="submit" onclick="calc()">
+    </form>
+
+    <script>
+        function calc() {
+            var num1 = parseInt(document.getElementById("fnum").value);
+            var op = document.getElementById("op").value;
+            var num2 = parseInt(document.getElementById("lnum").value);
+
+            var sum_res = num1 + num2;
+            var sub_res = num1 - num2;
+            var mult_res = num1 * num2;
+            var div_res = num1 / num2;
+            var mod_res = num1 % num2;
+            
+
+            if (op == "sum"){
+                alert(num1 + " + " + num2 + " = " + sum_res );
+            }
+            else if (op == "subtract"){
+                alert(num1 + " - " + num2 + " = " + sub_res );
+            }
+            else if (op == "multi"){
+                alert(num1 + " * " + num2 + " = " + mult_res );
+            }
+            else if (op == "division"){
+                alert(num1 + " / " + num2 + " = " + div_res );
+            }
+            else if (op == "moduls"){
+                alert(num1 + " % " + num2 + " = " + mod_res );
+            }
+        }    
+        </script>
+
+</body>
+</html>
