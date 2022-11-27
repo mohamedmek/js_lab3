@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Sum and average</title>
+</head>
+<body>
+    <button onclick="sum_and_average()">Sum and average</button>
+
+    <script>
+        function sum_and_average(){
+            let num = parseInt(prompt("How many numbers u want to get the sum and average of it?"));
+            
+            var numbers =[]
+
+            let sum = 0;
+            
+            for (let i = 1; i <= num; i++) {
+
+                numbers[i] = [parseInt(prompt("enter num"+ i))];
+
+                  sum += parseInt(numbers[i]) ;
+            }
+            
+            alert("sum of numbers = "+ sum);
+            alert("avg of numbers = " + sum/num);
+            
+            
+            
+        }
+    </script>
+</body>
+</html>
